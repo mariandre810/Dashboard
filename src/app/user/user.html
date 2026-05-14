@@ -1,0 +1,80 @@
+<header class="bg-[#51438F] w-auto h-20  flex justify-between">
+    <div class=" flex justify-around items-center gap-10 ">
+        <i class="bi bi-pencil text-white  ml-10"></i>
+        <h1 class="text-white font-bold">Norsk <br>Timeregistering</h1>
+        <input type="text" class="bg-white h-10 w-110 flex justify-center items-center rounded-sm"
+            placeholder="    🔎  buscar...">
+    </div>
+    <div class="w-80 flex justify-center items-center">
+        <ul class="flex gap-10 text-white font-bold ">
+            <li><i class="bi bi-bell "></i></li>
+            <li><i class="bi bi-person-square"></i></li>
+            <li>Luke Asot</li>
+            <li><i class="bi bi-caret-down-fill"></i></li>
+        </ul>
+    </div>
+</header>
+<section class=" flex bg-[#fcefefe3]">
+    <div class="bg-[#715FC5] w-1/4 h-138 flex ">
+        <ul class="flex  flex-col gap-5 p-5 text-white">
+            <li><i class="bi bi-person p-5"></i>Profile</li>
+            <li><i class="bi bi-people-fill p-5"></i>Users</li>
+            <li><i class="bi bi-card-text p-5"></i>Control Panel</li>
+            <li><i class="bi bi-folder-check p-5"></i>Projects</li>
+            <li><i class="bi bi-folder-fill p-5"></i>Tasks</li>
+            <li><i class="bi bi-arrow-right-square-fill p-5"></i>Logs</li>
+            <li><i class="bi bi-chat-left-fill p-5"></i>Group Chats</li>
+            <li><i class="bi bi-file-bar-graph p-5"></i>Reports</li>
+        </ul>
+    </div>
+    <div class=" flex flex-col items-center h-20 w-full ">
+        <div class="flex  justify-between items-center w-full h-20 px-10 my-5">
+            <button class="flex justify-center items-center flex-row gap-5 bg-white h-10 w-50 rounded-md ">
+                <h1>Members</h1>
+                <h1>Admins</h1>
+            </button>
+            <div class="flex flex-col">
+                <p>Total members: 2000</p>
+                <p>Current Used: 1800</p>
+            </div>
+        </div>
+        <div class="flex justify-around ">
+            <ul class="flex gap-5 ">
+                <li class="flex font-bold items-center text-xl">Members</li>
+                <li><button class="bg-[#715FC5] text-white rounded-md font-bold w-20 h-10">Add new</button></li>
+                <li><button class="bg-white w-50 h-10 rounded-md border-2 border-gray-300">Import members</button>
+                </li>
+                <li><button class="bg-white w-50 h-10 rounded-md border-2 border-gray-300">Export members (Excel)</button></li>
+            </ul>
+            <button class="bg-[#715FC5] text-white rounded-md font-bold w-20 h-10 ml-70"> <i class="bi bi-chevron-left "></i>Filter</button>
+        </div>
+        <div class="flex justify-between">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="p-3">Photo</th>
+                        <th class="p-3">Member Name</th>
+                        <th class="p-3">Mobile</th>
+                        <th class="p-3">Email</th>
+                        <th class="p-3">Id</th>
+                        <th class="p-3">Department</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let i of usuarios" class="overflow-y-scroll">
+
+                        <td class="p-3">
+                            <img [src]="i.image">
+                        </td>
+                        <td>{{i.firstName}}</td>
+                        <td>{{i.phone}}</td>
+                        <td>{{i.email}}</td>
+                        <td>{{i.id}}</td>
+                        <td>{{i.company.department}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
