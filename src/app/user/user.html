@@ -14,17 +14,17 @@
         </ul>
     </div>
 </header>
-<section class=" flex bg-[#fcefefe3]">
-    <div class="bg-[#715FC5] w-70 h-139 flex  ">
+<section class=" flex bg-[#fcefefe3] h-138 ">
+    <div class="bg-[#715FC5] w-70 h-138  flex  ">
         <ul class="flex flex-col gap-5 text-white my-5  px-5">
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-person"></i>Profile</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-people-fill "></i>Users</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-card-text "></i>Control Panel</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-folder-check "></i>Projects</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-folder-fill "></i>Tasks</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-arrow-right-square-fill "></i>Logs</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-chat-left-fill "></i>Group Chats</li>
-            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-file-bar-graph "></i>Reports</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-person mr-5"></i>Profile</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-people-fill mr-5"></i>Users</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-card-text mr-5"></i>Control Panel</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-folder-check mr-5"></i>Projects</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-folder-fill mr-5"></i>Tasks</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-arrow-right-square-fill  mr-5"></i>Logs</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-chat-left-fill mr-5"></i>Group Chats</li>
+            <li class=" hover:bg-[#aaa7a75e] hover:border-s-2 p-5 w-full  items-center  py-2"><i class="bi bi-file-bar-graph mr-5"></i>Reports</li>
         </ul>
     </div>
     <div class=" flex flex-col items-center h-20 w-full ">
@@ -38,7 +38,7 @@
                 <p>Current Used: 1800</p>
             </div>
         </div>
-        <div class="flex justify-around ">
+        <div class="flex justify-around">
             <ul class="flex gap-5 ">
                 <li class="flex font-bold items-center text-xl">Members</li>
                 <li><button class="bg-[#715FC5] text-white rounded-md font-bold w-20 h-10">Add new</button></li>
@@ -48,29 +48,29 @@
             </ul>
             <button class="bg-[#715FC5] text-white rounded-md font-bold w-20 h-10 ml-70"> <i class="bi bi-chevron-left "></i>Filter</button>
         </div>
-        <div class="flex">
+        <div class="flex  w-full mt-5">
             <table class="w-full border-collapse">
                 <thead>
-                    <tr>
+                    <tr class="flex justify-between text-justify mx-5">
                         <th>Photo</th>
-                        <th>Member Name</th>
-                        <th>Mobile</th>
-                        <th>Email</th>
-                        <th>Id</th>
-                        <th>Department</th>
+                        <th class="ml-10">Member Name</th>
+                        <th class="ml-10">Mobile</th>
+                        <th class="ml-30">Email</th>
+                        <th class="ml-20">Id</th>
+                        <th class="mr-15">Department</th>
                     </tr>
                 </thead>
 
-                <tbody class=" flex justify-between  flex-col overflow-y-scroll w-200 h-90  bg-amber-300">
-                    <tr *ngFor="let i of usuarios" >
+                <tbody class=" flex justify-between  flex-col overflow-y-scroll w-full h-95">
+                    <tr *ngFor="let i of usuarios" class="grid grid-cols-6 gap-10  items-center mx-3" >
 
-                        <td class="p-3">
-                            <img [src]="i.image">
+                        <td class="">
+                            <img [src]="i.image" class="w-16 h-16 ">
                         </td>
                         <td>{{i.firstName}}</td>
                         <td>{{i.phone}}</td>
                         <td>{{i.email}}</td>
-                        <td>{{i.id}}</td>
+                        <td class="mx-30">{{i.id}}</td>
                         <td>{{i.company.department}}</td>
                     </tr>
                 </tbody>
