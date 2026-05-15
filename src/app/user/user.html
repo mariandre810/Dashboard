@@ -15,16 +15,16 @@
     </div>
 </header>
 <section class=" flex bg-[#fcefefe3]">
-    <div class="bg-[#715FC5] w-1/4 h-138 flex ">
-        <ul class="flex  flex-col gap-5 p-5 text-white">
-            <li><i class="bi bi-person p-5"></i>Profile</li>
-            <li><i class="bi bi-people-fill p-5"></i>Users</li>
-            <li><i class="bi bi-card-text p-5"></i>Control Panel</li>
-            <li><i class="bi bi-folder-check p-5"></i>Projects</li>
-            <li><i class="bi bi-folder-fill p-5"></i>Tasks</li>
-            <li><i class="bi bi-arrow-right-square-fill p-5"></i>Logs</li>
-            <li><i class="bi bi-chat-left-fill p-5"></i>Group Chats</li>
-            <li><i class="bi bi-file-bar-graph p-5"></i>Reports</li>
+    <div class="bg-[#715FC5] w-70 h-139 flex  ">
+        <ul class="flex flex-col gap-5 text-white my-5  px-5">
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-person"></i>Profile</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-people-fill "></i>Users</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-card-text "></i>Control Panel</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-folder-check "></i>Projects</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-folder-fill "></i>Tasks</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-arrow-right-square-fill "></i>Logs</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-chat-left-fill "></i>Group Chats</li>
+            <li class=" hover:bg-[#aaa7a75e] w-60 items-center  py-2"><i class="bi bi-file-bar-graph "></i>Reports</li>
         </ul>
     </div>
     <div class=" flex flex-col items-center h-20 w-full ">
@@ -48,21 +48,21 @@
             </ul>
             <button class="bg-[#715FC5] text-white rounded-md font-bold w-20 h-10 ml-70"> <i class="bi bi-chevron-left "></i>Filter</button>
         </div>
-        <div class="flex justify-between">
+        <div class="flex">
             <table class="w-full border-collapse">
                 <thead>
                     <tr>
-                        <th class="p-3">Photo</th>
-                        <th class="p-3">Member Name</th>
-                        <th class="p-3">Mobile</th>
-                        <th class="p-3">Email</th>
-                        <th class="p-3">Id</th>
-                        <th class="p-3">Department</th>
+                        <th>Photo</th>
+                        <th>Member Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Id</th>
+                        <th>Department</th>
                     </tr>
                 </thead>
 
-                <tbody>
-                    <tr *ngFor="let i of usuarios" class="overflow-y-scroll">
+                <tbody class=" flex justify-between  flex-col overflow-y-scroll w-200 h-90  bg-amber-300">
+                    <tr *ngFor="let i of usuarios" >
 
                         <td class="p-3">
                             <img [src]="i.image">
